@@ -1,0 +1,68 @@
+<nav class="navbar sticky-top navbar-dark shadow p-3 mb-5" style="background-color: #0061a9;">
+	<a class="navbar-brand" href="#">
+		<img src="../assets/images/icon.png" width="30" height="30" class="d-inline-block align-top" alt="">
+		App Name
+	</a>
+	<a id="githubLink" href="" target="_blank" style="border-radius: 50%"><img src="../assets/images/github-icon.png" width="30" style=""/></a>
+</nav>
+
+
+<div class="row justify-content-around">
+	<div class="col-sm-4 justify-content-md-center">
+		<h2 style="text-align: center;">Image 1</h2>
+		<div style="display:block;width:100%;height:200px">
+			<img src="../assets/images/placeholder-image.png" *ngIf="!imgURL1" style="width: 100%;border:1px dotted black;margin: auto;">
+			<img [src]="imgURL1" *ngIf="imgURL1" style="max-width:100%;max-height:100%;border:1px dotted black;margin: auto;display: block;">
+		</div>
+		<br/><br/>
+		<div class="container1" appDnd (fileDropped)="onFileDropped($event,1)">
+			<input type="file" #fileDropRef id="fileDropRef" (change)="fileBrowseHandler($event.target.files,1)" />
+			<svg xmlns="http://www.w3.org/2000/svg" width="63" height="64" viewBox="0 0 63 64" style="position: absolute;right: 15px">
+				<g fill="#3B454F" fill-rule="nonzero">
+					<path
+						d="M42.656 15.135a1.953 1.953 0 0 1-1.391-.578L31.5 4.795l-9.765 9.762a1.97 1.97 0 1 1-2.785-2.785L30.106.616a1.97 1.97 0 0 1 2.785 0l11.157 11.156a1.97 1.97 0 0 1-1.392 3.363z" />
+					<path
+						d="M31.5 36.791a1.97 1.97 0 0 1-1.969-1.969V2.01a1.97 1.97 0 0 1 3.938 0v32.812a1.97 1.97 0 0 1-1.969 1.969z" />
+					<path
+						d="M55.781 63.041H7.22A7.225 7.225 0 0 1 0 55.822V41.385a4.599 4.599 0 0 1 4.594-4.594h7.234a4.567 4.567 0 0 1 4.402 3.276l2.814 9.382a.658.658 0 0 0 .628.467h23.656a.658.658 0 0 0 .628-.467l2.814-9.385a4.572 4.572 0 0 1 4.402-3.273h7.234A4.599 4.599 0 0 1 63 41.385v14.437a7.225 7.225 0 0 1-7.219 7.219zM4.594 40.729a.656.656 0 0 0-.657.656v14.437a3.286 3.286 0 0 0 3.282 3.282H55.78a3.286 3.286 0 0 0 3.282-3.282V41.385a.656.656 0 0 0-.657-.656h-7.234a.65.65 0 0 0-.628.467L47.73 50.58a4.628 4.628 0 0 1-4.402 3.274H19.672a4.567 4.567 0 0 1-4.402-3.276l-2.814-9.382a.65.65 0 0 0-.628-.467H4.594z" />
+				</g>
+			</svg>
+
+			<h3 style="margin-left: -65px;">Drag and drop file here</h3>
+			<h3 style="margin-left: -65px;">or Click to Browse</h3>
+		</div>
+	</div>
+
+	<div class="col-sm-4 justify-content-md-center">
+		<h2 style="text-align: center;">Image 2</h2>
+		<div style="display:block;width:100%;height:200px">
+			<img src="../assets/images/placeholder-image.png" *ngIf="!imgURL2" style="width: 100%;border:1px dotted black;margin: auto;">
+			<img [src]="imgURL2" *ngIf="imgURL2" style="max-width:100%;max-height:100%;border:1px dotted black;margin: auto;display: block">
+		</div>
+		<br/><br/>
+		<div class="container1" appDnd (fileDropped)="onFileDropped($event,2)">
+			<input type="file" #fileDropRef id="fileDropRef" (change)="fileBrowseHandler($event.target.files,2)" />
+			<svg xmlns="http://www.w3.org/2000/svg" width="63" height="64" viewBox="0 0 63 64" style="position: absolute;right: 15px">
+				<g fill="#3B454F" fill-rule="nonzero">
+					<path
+						d="M42.656 15.135a1.953 1.953 0 0 1-1.391-.578L31.5 4.795l-9.765 9.762a1.97 1.97 0 1 1-2.785-2.785L30.106.616a1.97 1.97 0 0 1 2.785 0l11.157 11.156a1.97 1.97 0 0 1-1.392 3.363z" />
+					<path
+						d="M31.5 36.791a1.97 1.97 0 0 1-1.969-1.969V2.01a1.97 1.97 0 0 1 3.938 0v32.812a1.97 1.97 0 0 1-1.969 1.969z" />
+					<path
+						d="M55.781 63.041H7.22A7.225 7.225 0 0 1 0 55.822V41.385a4.599 4.599 0 0 1 4.594-4.594h7.234a4.567 4.567 0 0 1 4.402 3.276l2.814 9.382a.658.658 0 0 0 .628.467h23.656a.658.658 0 0 0 .628-.467l2.814-9.385a4.572 4.572 0 0 1 4.402-3.273h7.234A4.599 4.599 0 0 1 63 41.385v14.437a7.225 7.225 0 0 1-7.219 7.219zM4.594 40.729a.656.656 0 0 0-.657.656v14.437a3.286 3.286 0 0 0 3.282 3.282H55.78a3.286 3.286 0 0 0 3.282-3.282V41.385a.656.656 0 0 0-.657-.656h-7.234a.65.65 0 0 0-.628.467L47.73 50.58a4.628 4.628 0 0 1-4.402 3.274H19.672a4.567 4.567 0 0 1-4.402-3.276l-2.814-9.382a.65.65 0 0 0-.628-.467H4.594z" />
+				</g>
+			</svg>
+		
+			<h3 style="margin-left: -65px;">Drag and drop file here</h3>
+			<h3 style="margin-left: -65px;">or Click to Browse</h3>
+		</div>
+	</div>
+</div>
+<div class="row justify-content-md-center" style="position: relative;">
+	<button type="button" [disabled]="(waitingResponse || !imgURL1 || !imgURL2)" class="btn btn-primary" style="margin: auto;" (click)='verifySign()'>Execute Model</button>
+	<div *ngIf="waitingResponse" class="loader"></div>
+</div>
+<div class="row justify-content-md-center">
+	<h3 *ngIf="outputResult == 1" style="color:#096703">Positive Result with Confidence: {{conf}}</h3>
+	<h3 *ngIf="outputResult == 0" style="color: #bb0000;">Negative Result with Confidence: {{conf}}</h3>
+</div>
