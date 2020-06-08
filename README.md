@@ -1,5 +1,9 @@
 # Computer-Vision-Model-Demo-Template
 
+# Web Application Screenshot
+
+<img src="README_Images/Screenshot.png" />
+
 # Assumptions before Proceeding
 
 * You already have a trained Keras / PyTorch / SKLearn or any other model with you.
@@ -15,9 +19,11 @@ This template will work for developers if the following use case sequence matche
 * He uploads 1/2 images by dragging and dropping them in the respective drop boxes or by clicking on the boxes for selecting images
 * He clicks the button to view the output
 
-# Web Application Screenshot
+# Example Website
 
-<img src="README_Images/Screenshot.png" />
+Example Website that is using this template:
+
+[VeriSign](https://veri-sign.web.app/)
 
 # Back-End
 
